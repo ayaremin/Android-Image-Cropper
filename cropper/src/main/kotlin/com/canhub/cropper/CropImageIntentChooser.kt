@@ -137,6 +137,7 @@ internal class CropImageIntentChooser(
         )
       }
       intent.putExtra(MediaStore.EXTRA_OUTPUT, cameraImgUri)
+      intent.putExtra("android.intent.extras.CAMERA_FACING", Camera.CameraInfo.CAMERA_FACING_FRONT)
       allIntents.add(intent)
     }
     return allIntents
